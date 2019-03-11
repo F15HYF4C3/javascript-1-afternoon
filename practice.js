@@ -107,22 +107,16 @@ console.log(devMountainClassPet);
 
 // Code here
 var NAMEPARAM;
-var fOne;
-var fTwo;
 function nameCheck(NAMEPARAM){
   if(NAMEPARAM === 'Steven'){
-  ('What is up ' + NAMEPARAM + '?'); 
-} else {
-  if(NAMEPARAM === 'Bryan'){
-    ('Hey ' + NAMEPARAM + '!');
-      } else {
-        return('Cool name, ' + NAMEPARAM);
-    }
+  return('What is up ' + NAMEPARAM + '?'); 
+  } else if (NAMEPARAM === 'Bryan'){
+    return('Hey ' + NAMEPARAM + '!');
+  } else {
+    return('Cool name, ' + NAMEPARAM);
   }
-}
-
-      
-      var friend = nameCheck('Steven');
+}      
+      var friend = nameCheck('Bryan');
   console.log(friend);
 //////////////////PROBLEM 12////////////////////
 
@@ -133,12 +127,6 @@ function nameCheck(NAMEPARAM){
 //Code Here
 var num1;
 var num2;
-function newFunction() {
-  var friend = nameCheck();
-  console.log(friend);
-  return friend;
-}
-
 function add(num1, num2){
 return (num1 + num2);
 }
@@ -157,24 +145,20 @@ var mathSum = add(3, 4);
 // Otherwise, you should return the string 'you need to evaluate your favorite color choice'
 
 // Code here
-var color = "TBD";
+var color;
 function favColorFinder(color){
   if(color === 'red'){
-   ('red is a great color');
+    return('red is a great color');
+  } else if(color === 'green'){
+    return('green is a solid favorite color');
+  } else if(color === 'black'){
+    return('so trendy');
   } else {
-    if(color === 'green'){
-      ('green is a solid favorite color');
-    } else {
-    if(color === 'black'){
-      ('so trendy');
-    } else {
-      return('you need to evaluate your favorite color choice');
-    }
-   }
-  }
-}
-
-var colorAnswer = favColorFinder('red');
+    return('you need to evaluate your favorite color choice');
+       }
+      }
+    
+  var colorAnswer = favColorFinder();
 console.log(colorAnswer);
 //////////////////PROBLEM 14////////////////////
 
