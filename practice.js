@@ -3,11 +3,11 @@
 //Create a variable called myName that is a string data type
 
 //Code here
-const myName = `Tyra`;
+var myName = 'Tyra';
 //////////////////PROBLEM 2////////////////////
 
 //Create a variable called myAge that is a number data type
-const myAge = 23;
+var myAge = 23;
 //Code here
 
 //////////////////PROBLEM 3////////////////////
@@ -15,19 +15,20 @@ const myAge = 23;
 //Create a variable called lovesCode that is a boolean data type
 
 //Code here
-const lovesCode = true;
+var lovesCode = true;
 //////////////////PROBLEM 4////////////////////
 
 //Create a variable called greatestFear that is undefined because we fear nothing
 
 //Code here
 var greatestFear;
+console.log(greatestFear);
 //////////////////PROBLEM 5////////////////////
 
 //Create a variable called devMountainGoal that is null because we are just starting out
 
 //Code here
-const devMountainGoal = null;
+var devMountainGoal = null;
 //////////////////PROBLEM 6////////////////////
 
 //Create a function declaration called greeting that
@@ -36,11 +37,11 @@ const devMountainGoal = null;
 //plus the value of the name parameter.
 
 //Code here
-const name = "TBD";
+var name = "undefined";
 function greeting(name){
-  return("Hello, " + name)
+  return("Hello, " + name);
 }
-const coder = greeting("Tyra");
+var coder = greeting("Tyra");
 console.log(coder);
 //////////////////PROBLEM 7////////////////////
 
@@ -49,9 +50,9 @@ console.log(coder);
 
 //Code Here
 var newGreeting = function(name){
-  return("Hello, " + name)
-}
-const coders = newGreeting("Tyra");
+  return("Hello, " + name);
+};
+var coders = newGreeting("Tyra");
 console.log(coders);
 //////////////////PROBLEM 8////////////////////
 
@@ -59,10 +60,11 @@ console.log(coders);
 //Name it finalGreeting.
 
 //Code Here
-var finalGreeting = function(){
-return ("Hello, " + name)
-}
-const coder3 = finalGreeting("Tyra");
+var finalGreeting = (name) => {
+  return("Hello, " + name);
+};
+
+var coder3 = finalGreeting("Trogdor");
 console.log(coder3);
 
 
@@ -72,7 +74,7 @@ console.log(coder3);
 //"apples", "milk", "eggs", "bread"
 
 //Code Here
-var groceries = [`apples`, `milk`, `eggs`, `bread`];
+var groceries = ['apples', 'milk', 'eggs', 'bread'];
 //////////////////PROBLEM 10////////////////////
 
 //Create an object saved to the variable dog.
@@ -86,14 +88,14 @@ var dog = {
   color: 'Black',
   age: 2,
   goodBoy: true
-}
+};
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
 //Code Here
 var devMountainClassPet = dog.name;
-console.log(devMountainClassPet)
+console.log(devMountainClassPet);
 //////////////////PROBLEM 11////////////////////
 
 //Write a function called nameCheck that takes in a name parameter. 
@@ -105,16 +107,23 @@ console.log(devMountainClassPet)
 
 // Code here
 var NAMEPARAM;
+var fOne;
+var fTwo;
 function nameCheck(NAMEPARAM){
-  if(NAMEPARAM = 'Steven'){
-    ('What is up Steven?');
-  } else {
-    if(NAMEPARAM = 'Bryan'){
-      ('Hey Bryan!');
+  if(NAMEPARAM === 'Steven'){
+  ('What is up ' + NAMEPARAM + '?'); 
+} else {
+  if(NAMEPARAM === 'Bryan'){
+    ('Hey ' + NAMEPARAM + '!');
+      } else {
+        return('Cool name, ' + NAMEPARAM);
     }
-  var friend = nameCheck();
-nameCheck('Steven');
-console.log(friend);
+  }
+}
+
+      
+      var friend = nameCheck('Steven');
+  console.log(friend);
 //////////////////PROBLEM 12////////////////////
 
 // Create a function called add that takes in two parameters
@@ -124,6 +133,12 @@ console.log(friend);
 //Code Here
 var num1;
 var num2;
+function newFunction() {
+  var friend = nameCheck();
+  console.log(friend);
+  return friend;
+}
+
 function add(num1, num2){
 return (num1 + num2);
 }
@@ -142,25 +157,28 @@ var mathSum = add(3, 4);
 // Otherwise, you should return the string 'you need to evaluate your favorite color choice'
 
 // Code here
+var color = "TBD";
 function favColorFinder(color){
-  if(color = 'red'){
-    'red is a great color';
+  if(color === 'red'){
+   ('red is a great color');
   } else {
-    if(color = 'green'){
-      'green is a solid favorite color';
+    if(color === 'green'){
+      ('green is a solid favorite color');
+    } else {
+    if(color === 'black'){
+      ('so trendy');
+    } else {
+      return('you need to evaluate your favorite color choice');
     }
-  } else {
-    if(color = 'black'){
-      'so trendy';
-    }
-  } else {
-    return('you need to evaluate your favorite color choice');
+   }
   }
 }
+
+var colorAnswer = favColorFinder('red');
+console.log(colorAnswer);
 //////////////////PROBLEM 14////////////////////
 
 let duck = "cute";
-
 function bathroom() {
   let rubberDuck = "squeaky";
   function bathtub() {
@@ -179,28 +197,29 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 15////////////////////
 
 //Create a variable called age with your age assigned to you
 
 // Code Here
-
+var age = 23;
 // FLASH FORWARD TO NEXT YEAR
 // reassign the value of age to be one greater than it was, because, we all get older
 
 // Code Here
-
+age = 24;
 // Good news! We can live forever. Set your age to 999
 
 // Code Here
+age = 999;
